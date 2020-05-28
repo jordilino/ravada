@@ -381,37 +381,49 @@ sub _update_isos {
             ,file_re => 'openSUSE-Leap-15.\d+-NET-x86_64.iso'
 
         }
-        ,xubuntu_beaver_64 => {
+        ,xubuntu_focal_fossa => {
+            name => 'Xubuntu Focal Fossa 64 bits'
+            ,description => 'Xubuntu 20.04 Focal Fossa 64 bits'
+            ,arch => 'amd64'
+            ,xml => 'bionic-amd64.xml'
+            ,xml_volume => 'bionic64-volume.xml'
+            ,md5_url => '$url/MD5SUMS'
+            ,url => 'http://mirror.us.leaseweb.net/ubuntu-cdimage/xubuntu/releases/20.04/release/'
+            ,file_re => 'xubuntu-20.04-desktop-amd64.iso'
+            ,rename_file => 'xubuntu-20.04-desktop-amd64.iso'
+        }
+	,xubuntu_beaver_64 => {
             name => 'Xubuntu Bionic Beaver 64 bits'
             ,description => 'Xubuntu 18.04 Bionic Beaver 64 bits'
             ,arch => 'amd64'
             ,xml => 'bionic-amd64.xml'
             ,xml_volume => 'bionic64-volume.xml'
-            ,md5_url => '$url/../MD5SUMS'
-            ,url => 'http://archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/'
-            ,file_re => 'mini.iso'
+            ,md5_url => '$url/MD5SUMS'
+            ,url => 'http://mirror.us.leaseweb.net/ubuntu-cdimage/xubuntu/releases/18.04/release/'
+            ,file_re => 'xubuntu-18.04-desktop-amd64.iso'
             ,rename_file => 'xubuntu_bionic_64.iso'
         }
-        ,xubuntu_beaver_32 => {
+	,xubuntu_beaver_32 => {
             name => 'Xubuntu Bionic Beaver 32 bits'
             ,description => 'Xubuntu 18.04 Bionic Beaver 32 bits'
             ,arch => 'i386'
             ,xml => 'bionic-i386.xml'
             ,xml_volume => 'bionic32-volume.xml'
-            ,md5_url => '$url/../MD5SUMS'
-            ,url => 'http://archive.ubuntu.com/ubuntu/dists/bionic/main/installer-i386/current/images/netboot/'
-            ,file_re => 'mini.iso'
+            ,md5_url => '$url/MD5SUMS'
+            ,url => 'http://mirror.us.leaseweb.net/ubuntu-cdimage/xubuntu/releases/18.04/release/'
+            ,file_re => 'xubuntu-18.04-desktop-i386.iso'
             ,rename_file => 'xubuntu_bionic_32.iso'
         }
-        ,xubuntu_xenial => {
+	,xubuntu_xenial => {
             name => 'Xubuntu Xenial Xerus'
             ,description => 'Xubuntu 16.04 Xenial Xerus 64 bits (LTS)'
-            ,url => 'http://archive.ubuntu.com/ubuntu/dists/xenial/main/installer-amd64/current/images/netboot/mini.iso'
+            ,arch => 'amd64'
            ,xml => 'yakkety64-amd64.xml'
             ,xml_volume => 'yakkety64-volume.xml'
-            ,md5 => 'fe495d34188a9568c8d166efc5898d22'
-            ,rename_file => 'xubuntu_xenial_mini.iso'
-            ,min_disk_size => '10'
+            ,md5_url => '$url/MD5SUMS'
+            ,url => 'http://mirror.us.leaseweb.net/ubuntu-cdimage/xubuntu/releases/16.04/release/'
+            ,file_re => 'xubuntu-16.04-desktop-amd64.iso'
+            ,rename_file => 'xubuntu_xenial_64.iso'
         }
 	,lubuntu_bionic_64 => {
              name => 'Lubuntu Bionic Beaver 64 bits'
